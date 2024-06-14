@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import { Header } from './Header';
 
 function App() {
+  var data = [
+    {
+      name: "office task -1",
+      desc: "this is the description for My First task",
+      status: "Notcompleted"
+    },
+    {
+      name: "office task -2",
+      desc: "this is the description for My Second task",
+      status: "Completed"
+    },
+    {
+      name: "office task -3",
+      desc: "this is the description for My Third task",
+      status: "Notcompleted"
+    }
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="page">
+      <Header data={data} />
     </div>
   );
 }
-
 export default App;
